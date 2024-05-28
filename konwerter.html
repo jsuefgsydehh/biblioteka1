@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klub książki</title>
+    <style>
+       
+  </style>
+  <link rel="stylesheet" href="style/spistresci.css">
+  <link rel="stylesheet" href="style/tekstogólny.css">
+  <link rel="stylesheet" href="style/wyglad.css">
+<body>
+
+    <h1>Biblioteka</h1>
+<nav> 
+    
+<h3>Spis treści:</h3>
+<ol>
+    
+    <li><a href="stronaglowna.html">Strona Główna</a> <!--spis książek-->
+    <li><a href="klub.html">Klub Książki</a>  <!--opis klubu książki, formularz, zegar-->  
+    <li><a href="konwerter.html">Przelicznik</a> <!--ile stron ktoś przeczytał w życiu, ile dowiedział się słów-->
+    <li><a href="lokalizacja.html">lokalizacja</a> <!--miejsc gdzie jest bibioteka-->
+    <li><a href="wyglad.html">wygląd biblioteki</a> <!--zjęcia  biblioteki-->
+    <li><a href="prezentacja.html">prezentacja</a> <!--o pierwszej bibliotece-->
+    <li><a href="pracownicy.html">pracownicy</a>  <!--zapytam kilku osób czy mogę udostępnić ich foto i opisać ich na stronie-->
+    <li><a href="topksiazki.html">topksiążki</a> <!--tabela z top 10 najczęściej wyporzyczanych książek-->
+    <li><a href="canvas.html">canvas</a> 
+       
+    </ol>
+    </nav>
+    <article>
+        <h2>W tym rozdziale pokażemy, po co humaniście matma.  </h2>
+        <br>
+        <h3>I rzecz do przeliczenia:</h3> <br>
+
+        <p>Ilość przeczytanych słów w książce:</p> 
+        <label for="pages">Ilość stron w książce:</label> 
+     <input type="number" value=0  id="pages" name="pages"> <br>
+
+     <label for="WordInPages">ilość słów na stronie:*</label> 
+     <input type="number" value=225  id="WordInPages" name="WordInPages"> <br> 
+    
+
+     <label for="words">Ilość przeczytanych słów:</label> 
+     <input type="number" readonly id="words" name="words"> <br>
+
+    
+     <div id="divWynik"></div>
+
+    <input type="button" value="Olbicz ilość słów" 
+    onclick="Words(pages.value, WordInPages.value)" >
+    
+    <p>*Pomoc dydatkyczna (zawartość słów na stronie):</p> 
+    <p>Strona A4: 450 </p> 
+    <p>Strona A5: 225 </p>
+
+
+    <script src="script/kalkulator.js"></script>
+
+
+
+
+    </article>
+
+
+
+
+    <script src="skrypty/konwerter1.js"></script> 
+    <aside>
+    
+        <iframe  src="naprawo.html"></iframe>
+    </aside>
+    <footer>
+        To jest stopka strony  <br>
+        „Projekt strony internetowej wykonany w ramach 
+        zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.” <br>
+        autorzy strony: <br>
+        Julia Głąb 157628 
+       </footer>
+       
+   </body>
+   </html>

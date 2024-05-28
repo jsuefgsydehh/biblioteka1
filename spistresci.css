@@ -1,0 +1,43 @@
+
+    nav ol {
+        color: #222;
+        text-anchor: #222;
+    }
+
+nav ol{ /*odpowiada za znikanie kropek*/
+    display: block;
+    list-style: none;
+    margin: 10px;
+    padding: 0px;
+    
+}  
+nav ol{ /*odpowiada za brak ciągłych linii*/
+    
+    width: 100px;
+    padding: 1px 1px 1px 1px ;
+    
+} 
+nav ol li{
+    border-bottom: 5px solid #f5f5f5;
+} /*odpowiada za te linie w spisie treści*/
+
+
+nav ol a:link, nav ol a:visited{ /*odpwoaidaza za pogrubienie i dostosowanie czciiąci do tekstu w spisie treści */
+    text-decoration: #222;
+    font-size: 17px;
+    width: 180px;
+    display: block;
+    padding: 7px;
+    font-weight: bold;
+    background-color: wheat;
+    color: #222;
+
+    
+
+} 
+nav ol a:hover{ /* za wyskakiwanie odnośników*/
+    width: 156px;
+    background-color: wheat;
+    border-left: 20px solid yellow;
+    color: #222;
+}

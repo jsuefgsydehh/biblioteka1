@@ -1,0 +1,40 @@
+table{
+    margin-top: 10px;
+    justify-content: center;
+    width: 590px;
+    text-align: center;
+    margin: 0 auto;
+}
+th{
+
+    border: 1px solid gray;
+}
+td{
+    border: 1px solid white;
+}
+ table, th, td, tr{
+    border-collapse: collapse ; 
+    border-spacing: 0px ;
+
+}
+.container {
+    text-align: center;
+}
+input{
+    cursor: pointer;
+    text-align: center;
+    border: #ccbdbd solid 1px;
+    padding: 10px;
+    text-justify: center;
+    margin-left: 170px;
+}
+input:focus{
+    background-color:#ccbdbd;
+}
+.container {
+    display: block;
+    min-height: 100vh;
+    justify-content: center;
+
+
+}

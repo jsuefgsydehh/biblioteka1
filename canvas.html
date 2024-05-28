@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klub książki</title>
+    <link rel="stylesheet" href="style/spistresci.css">
+
+    <link rel="stylesheet" href="style/tekstogólny.css">
+    <style>
+     canvas {
+         background-color: white;
+         border: 3px dashed #222;
+     }
+   
+ </style>
+ 
+ <script>
+     var canvas, context;
+     var canvas1, context1;
+     window.onload = function () {
+         this.canvas = document.getElementById("plotno");
+         this.canvas1 = document.getElementById("plotno1");
+     }
+     function rysujLinie() {
+         if (context == null) {
+             context = canvas.getContext("2d");
+         }
+         context.beginPath();
+         context.strokeStyle = "red";
+         context.lineWidth = 3;
+         context.lineCap = "round";
+
+         context.moveTo(10, 10);
+         context.lineTo(canvas.width - 10, canvas.height - 10);
+         context.stroke();
+
+         context.beginPath();
+         context.strokeStyle = "#00ff00";
+         context.lineWidth = 2;
+         context.moveTo(20, 10);
+         context.lineTo(canvas.width, canvas.height - 10);
+         context.stroke();
+     }
+
+     function rysujKrzywa() {
+         if (context == null) {
+             context = canvas.getContext("2d")
+         }
+         let srodekX = 200;
+         let srodekY = 150;
+         let promien = 100;
+         let poczatekKat = 1.2 * Math.PI;
+         let koniecKat = 1.8 * Math.PI;
+
+         context.strokeStyle = "459812";
+         context.lineWidth = 5;
+         context.beginPath();
+         context.arc(srodekX, srodekY, promien, poczatekKat, koniecKat);
+         context.stroke();
+
+         context.beginPath();
+         context.moveTo(155, 21);
+         context.bezierCurveTo(126, 205, 288, 51, 286, 242);
+         context.stroke();
+
+     }
+
+     function rysujFigury() {
+         if (context == null) {
+             context = canvas.getContext("2d");
+
+         }
+         // TRÓJKĄT
+         let dlugoscRamion = 10;
+         let dlugoscPodstawy = 15;
+         let h = Math.sqrt(Math.pow(dlugoscRamion, 2) - Math.pow(dlugoscPodstawy / 2, 2));
+
+         context.beginPath();
+         context.moveTo(canvas.width / 2 - dlugoscPodstawy / 2, canvas.height / 2);
+         context.lineTo(canvas.width / 2, canvas.height / 2 - h);
+         context.moveTo(canvas.width / 2, canvas.height / 2 - h);
+         context.lineTo(canvas.width / 2 + dlugoscPodstawy / 2, canvas.height / 2);
+         context.moveTo(canvas.width / 2 + dlugoscPodstawy / 2, canvas.height / 2);
+         context.lineTo(canvas.width / 2 - dlugoscPodstawy / 2, canvas.height / 2);
+         context.closePath();
+         context.stroke();
+
+         context.fillStyle = "yellow";
+         context.fill();
+         context.lineWidth = 2;
+         context.lineJoin = "round"; //"level"
+         context.strokeStyle = "#996600";
+         context.stroke();
+
+         //Prostokąt
+         context.fillStyle = "rgb(200,40,2,0.4)";
+         context.fillRect(150, 50, 90, 60);
+         context.strokeStyle = "rgb(200,0,10)";
+         context.strokeRect(150, 50, 90, 60);
+
+         //Okrąg
+         context.beginPath();
+         context.arc(170, 150, 20, 0, 2 * Math.PI);
+         context.stroke();
+
+
+     }
+
+
+     function rysujTekst() {
+         if (context == null) {
+             context = canvas.getContext("2d");
+         }
+         context.font = "20px Arial";
+         context.textAlign = "left";
+         context.fillText("Tekst wyrównany do lewej", canvas.width / 2, 50);
+
+         context.textAlign = "center";
+         context.lineWidth = 2;
+         context.strokeText("Tekst wyrównany do środka", canvas.width / 2, 100);
+
+     }
+
+     function czysc() {
+         context.clearRect(0, 0, canvas.width, canvas.height);
+     }
+     function rysujPacmana() {
+            if (context == null) {
+                context = canvas.getContext("2d")
+            }
+            let srodekX = 200;
+            let srodekY = 150;
+            let promien = 100;
+            let poczatekKat = 0.15 * Math.PI;
+            let koniecKat = 1.85 * Math.PI;
+
+
+            context.strokeStyle = "459812";
+            context.lineWidth = 5;
+            context.beginPath();
+            context.arc(srodekX, srodekY, promien, poczatekKat, koniecKat);
+            context.lineTo(canvas.width / 2, canvas.height / 2);
+            context.closePath();
+            context.fillStyle = "yellow";
+            context.fill();
+            context.stroke();
+            context.beginPath();
+            context.arc(srodekX * 1.2, srodekY * 0.7, 10, 0, 2 * Math.PI, false);
+            context.fillStyle = "rgb(0, 0, 0)";
+            context.fill();
+
+        }
+        function kwiatek(liczba) {
+          if (context1 == null) {
+                context1 = canvas1.getContext("2d")
+            }
+          context1.beginPath();
+          
+
+            let kat0 = (liczba > 1) ?  Math.PI / liczba : 0;
+            context1.rect(200, 50, 60, 60);
+
+            for (var i = 0; i < liczba; i++) {
+               context1.rotate(kat0);
+               context1.rect(200, 50, 60, 60);
+
+            }
+            context1.stroke();
+
+        }
+        function czysc() {
+         context1.clearRect(0, 0, canvas1.width, canvas1.height);
+     }
+
+ </script>
+</head>
+<body>
+    
+        <header>
+    <h1>Biblioteka</h1>
+        </header>
+    <nav> 
+        <header>
+<h3>Spis treści:</h3>
+        </header>
+<ol>
+    
+    <li><a href="stronaglowna.html">Strona Główna</a> <!--spis książek-->
+    <li><a href="klub.html">Klub Książki</a>  <!--opis klubu książki, formularz, zegar-->  
+    <li><a href="konwerter.html">Przelicznik</a> <!--ile stron ktoś przeczytał w życiu, ile dowiedział się słów-->
+    <li><a href="lokalizacja.html">lokalizacja</a> <!--miejsc gdzie jest bibioteka-->
+    <li><a href="wyglad.html">wygląd biblioteki</a> <!--zjęcia  biblioteki-->
+    <li><a href="prezentacja.html">prezentacja</a> <!--o pierwszej bibliotece-->
+    <li><a href="pracownicy.html">pracownicy</a>  <!--zapytam kilku osób czy mogę udostępnić ich foto i opisać ich na stronie-->
+    <li><a href="topksiazki.html">topksiążki</a> <!--tabela z top 10 najczęściej wyporzyczanych książek-->
+    <li><a href="canvas.html">canvas</a> 
+    
+    </ol>
+    </nav>
+    
+   <article>
+   
+   
+  
+             <h2>Rysunki w canvas.</h2>
+             <input type="button" value="Rysuj linie" onclick="rysujLinie()" />
+             <input type="button" value="Rysuj krzywe" onclick="rysujKrzywa()" />
+             <input type="button" value="Rysuj figury" onclick="rysujFigury()" />
+             <input type="button" value="Rysuj tekst" onclick="rysujTekst()" />
+             <input type="button" value="Pacman" onclick="rysujPacmana()" />
+             <input type="button" value="Czyść płótno" onclick="czysc()" />
+
+             <canvas id="plotno" width="500" height="300"></canvas>
+
+             <hr>
+          
+             <input type="button" id="rysowanie" onclick="kwiatek(ile.value)" value="Rysuj" />
+             <input type="number" value="10" id="ile" />
+             <input type="button" value="Czyść płótno" onclick="czysc()" />
+     
+             <canvas id="plotno1" width="500" height="300"></canvas>
+
+
+
+     </article>
+
+    
+
+  
+
+<aside>
+    
+    <iframe  src="naprawo.html"></iframe>
+</aside>
+<footer>
+    To jest stopka strony  <br>
+    „Projekt strony internetowej wykonany w ramach 
+    zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.” <br>
+    autorzy strony: <br>
+    Julia Głąb 157628 
+   </footer>
+   
+</body>
+</html>

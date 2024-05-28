@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klub książki</title>
+    <link rel="stylesheet" href="style/spistresci.css">
+    <link rel="stylesheet" href="style/formularz.css">
+    <link rel="stylesheet" href="style/tekstogólny.css">
+</head>
+<body>
+    
+        <header>
+    <h1>Biblioteka</h1>
+        </header>
+    <nav> 
+        <header>
+<h3>Spis treści:</h3>
+        </header>
+<ol>
+    
+    <li><a href="stronaglowna.html">Strona Główna</a> <!--spis książek-->
+    <li><a href="klub.html">Klub Książki</a>  <!--opis klubu książki, formularz, zegar-->  
+    <li><a href="konwerter.html">Przelicznik</a> <!--ile stron ktoś przeczytał w życiu, ile dowiedział się słów-->
+    <li><a href="lokalizacja.html">lokalizacja</a> <!--miejsc gdzie jest bibioteka-->
+    <li><a href="wyglad.html">wygląd biblioteki</a> <!--zjęcia  biblioteki-->
+    <li><a href="prezentacja.html">prezentacja</a> <!--o pierwszej bibliotece-->
+    <li><a href="pracownicy.html">pracownicy</a>  <!--zapytam kilku osób czy mogę udostępnić ich foto i opisać ich na stronie-->
+    <li><a href="topksiazki.html">topksiążki</a> <!--tabela z top 10 najczęściej wyporzyczanych książek-->
+    <li><a href="canvas.html">canvas</a> 
+    </ol>
+    </nav>
+    
+    <article>
+        <header>
+    <h2>Na początku opiszemy wam jak działa nasz klub.</h2>
+        </header>
+        <br>
+    <p>
+        Spotykamy się raz w miesiącu i rozmawiamy o nowo przeczytanej książce. Jeśli ktoś nie zdążył jej przeczytać albo nawet jeszcze nie zaczął – nic straconego. Wstęp jest wolny!
+        <br>Najbliższe spotkanie odbędzie się już 13 czerwca, więc nie zwlekajcie z zapisami!
+    </p>
+<header>
+     <h3>Zapisy na spoktanie klubu</h3>
+    </header>
+     <form action="" method="post">
+        <p> <b> Uwaga! </b> <br>
+            Pola oznaczone znakiem <em>*</em> są obowiązkowe! </p>
+    <fieldset>  
+        <legend>Dane kontaktowe</legend>
+        <label for="imie">Imie <em>*</em> </label> 
+        <input type="text" name="imie" id="imie" required >
+        <br>
+        <label for="nazwisko">Nazwisko <em>*</em> </label> 
+        <input type="text" name="nazwisko" id="nazwisko" required>
+        <br>
+        <label for="mail">E-mail <em>*</em> </label> 
+        <input type="email" name="mail" id="mail" 
+        placeholder="nazwa.example@ex.com" required>
+
+
+    </fieldset>
+</fieldset>
+<fieldset><legend>Prosimy o podanie chociaż jednego zainteresowania!</legend>
+    <input type="checkbox" name="Zainteresowania" id="">Elektryka <br>
+    <input type="checkbox" name="Zainteresowania" id="">Podróże <br>
+    <input type="checkbox" name="Zainteresowania" id="">Sport <br>
+    <input type="checkbox" name="Zainteresowania" id="">pisarstwo <br>
+    <input type="checkbox" name="Zainteresowania" id="">ogrodnictwo <br>
+    <input type="checkbox" name="Zainteresowania" id="">gotowanie, pieczenie <br>
+    <input type="checkbox" name="Zainteresowania" id="">ceramika, garkarstwo <br>
+    <input type="checkbox" name="Zainteresowania" id="">blogowanie <br>
+    <input type="checkbox" name="Zainteresowania" id="">fotografia <br>
+</fieldset>
+    <fieldset><legend>opcjonalnie, zapraszamy do napisania kilku słów od siebie!</legend>
+        <textarea name="opinia" cols="30" rows="3"></textarea>
+</fieldset>
+<fieldset>
+    <legend>Prosimy o podzielenie się preferencjami dotyczącymi dat spotkań.</legend>
+    <input type="radio" id="week" name="week" value="week">
+    <label for="week">Poniedziałek-czwartek</label>
+
+    <input type="radio" id="piatek" name="piatek" value="piatek">
+    <label for="piatek">Piątek</label>
+
+    <input type="radio" id="sobota " name="sobota" value="sobota">
+    <label for="sobota">Sobota</label>
+</fieldset>
+
+<fieldset>
+    <legend>Proszę wybrać preferowany gatunek.</legend>
+    <label for="books"></label>
+  <select name="books" id="books">
+    <option value="Fantastyka">Fantastyka</option>
+    <option value="science-fiction">science-fiction</option>
+    <option value="romans">romans</option>
+    <option value="dramat">dramat</option>
+  </select>
+
+</fieldset>
+
+<input type="submit" value="Wyślij">
+<input type="reset" value="Kasuj zapisy">
+
+</form>
+</article>
+
+<aside>
+    
+    <iframe src="naprawo.html"></iframe>
+</aside>
+<footer>
+    To jest stopka strony  <br>
+    „Projekt strony internetowej wykonany w ramach 
+    zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.” <br>
+    autorzy strony: <br>
+    Julia Głąb 157628 
+   </footer>
+   
+</body>
+</html>

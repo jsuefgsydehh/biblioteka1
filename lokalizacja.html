@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klub książki</title>
+    <style>
+       
+  </style>
+  <link rel="stylesheet" href="style/spistresci.css">
+  <link rel="stylesheet" href="style/tekstogólny.css">
+  <link rel="stylesheet" href="style/wyglad.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<body>
+
+    <h1>Biblioteka</h1>
+<nav> 
+    
+<h3>Spis treści:</h3>
+<ol>
+    
+    <li><a href="stronaglowna.html">Strona Główna</a> <!--spis książek-->
+    <li><a href="klub.html">Klub Książki</a>  <!--opis klubu książki, formularz, zegar-->  
+    <li><a href="konwerter.html">Przelicznik</a> <!--ile stron ktoś przeczytał w życiu, ile dowiedział się słów-->
+    <li><a href="lokalizacja.html">lokalizacja</a> <!--miejsc gdzie jest bibioteka-->
+    <li><a href="wyglad.html">wygląd biblioteki</a> <!--zjęcia  biblioteki-->
+    <li><a href="prezentacja.html">prezentacja</a> <!--o pierwszej bibliotece-->
+    <li><a href="pracownicy.html">pracownicy</a>  <!--zapytam kilku osób czy mogę udostępnić ich foto i opisać ich na stronie-->
+    <li><a href="topksiazki.html">topksiążki</a> <!--tabela z top 10 najczęściej wyporzyczanych książek-->
+    <li><a href="canvas.html">canvas</a> 
+    </ol>
+    </nav>
+    
+        <style>
+            #map {
+                right: px;
+                height: 400px;
+                width: 590px;
+                margin: 3px auto;
+                text-align: center;
+                padding: 3px;
+                border: 0;
+            }
+        
+        </style>
+        <article>
+            <h2>lokalizacja</h2>
+    </head>
+    
+        <div id="map"></div>
+        
+        <script>
+            var map = L.map('map').setView([52.414, 16.908], 13); // Ustawia początkowe współrzędne i powiększenie mapy
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(map);
+            // Tworzenie znacznika
+
+var marker = L.marker([52.414, 16.908]).addTo(map);
+
+// Dodanie etykiety do markera
+marker.bindPopup("<b>Nasza biblioteka</b>").openPopup();
+        </script>
+        <p>Nasza biblioteka znajduje się w największym parku w Poznaniu. Co jest ogromnym plusem biblioteki, bo od razu po wyjsciu z niej można usiąść na ławce i poczytać na świerzym powietrzu!</p>
+        
+
+
+    </article>
+        <aside>
+    
+            <iframe  src="naprawo.html"></iframe>
+        </aside>
+        <footer>
+            To jest stopka strony  <br>
+            „Projekt strony internetowej wykonany w ramach 
+            zaliczenia przedmiotu MO: TIiSKwE na kierunku Energetyka.” <br>
+            autorzy strony: <br>
+            Julia Głąb 157628 
+           </footer>
+           
+   </body>
+   </html>

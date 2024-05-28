@@ -1,0 +1,45 @@
+
+legend{
+    
+    color: #222;
+    font-weight: lighter; 
+    font-style: italic;
+} 
+fieldset{
+    width: 450px;
+    border-radius: 40px;
+    border: thick 1px #222;
+    margin: 15px ;
+} 
+form{
+    width: 450px;
+    margin: auto;
+  
+}
+
+em{
+    color: rgb(172, 110, 110);
+}
+label{
+    
+    display: flex;
+    width: 200px;
+    padding: 5px;
+    margin: 1px 50px 1px 1px;
+   
+
+    
+
+
+}
+input[type="text"],
+input[type="email"]{
+    width: 200px;
+}
+input:focus{
+    
+    color: white;
+    font-size: 20px;
+}
+
+
